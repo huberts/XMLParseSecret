@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Note>
+	<From>John</From>
+	<To>Anna</To>
+	<Encoded>
+
+		&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Secret&gt;&lt;Key&gt;My secret&lt;/Key&gt;&lt;Value&gt;Hello, world!&lt;/Value&gt;&lt;/Secret&gt;
+
+	</Encoded>
+</Note>
