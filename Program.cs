@@ -32,7 +32,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("XMLParserSecret");
             var noteSerializer = new XmlSerializer(typeof(Note));
             Note n;
             using (Stream reader = new FileStream(Path.Combine(Environment.CurrentDirectory, "../../..", "input.xml"), FileMode.Open))
@@ -43,6 +43,12 @@ namespace ConsoleApp1
             var secretSerializer = new XmlSerializer(typeof(Secret));
             Secret s = (Secret)secretSerializer.Deserialize(new MemoryStream(Encoding.UTF8.GetBytes(n.Encoded.Trim())));
 
+            Console.Write(
+                "From:" + n.From + "\n" +
+                "To:" + n.To + "\n" +
+                "SecretKey:" + s.Key + "\n" +
+                "SecretValue:" + s.Value + "\n"
+            );
         }
     }
 }
